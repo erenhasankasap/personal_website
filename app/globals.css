@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #fdfcf6; /* Light bej kağıt dokusu */
+  --color-surface: #f4f1ea; /* Darker bej */
+  --color-primary: #2d3748; /* Antrasit(siyah) */
+  --color-secondary: #718096; /* Gri metin tonu */
+  --color-accent: #c05621; /* Vurgu rengi kiremit rengi */
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  -webkit-font-smoothing: antialiased;
+}
