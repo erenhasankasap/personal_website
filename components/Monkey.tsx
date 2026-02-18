@@ -14,7 +14,7 @@ export default function Monkey() {
   <section className="min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto">
 
     <span className="text-accent font-medium tracking-widest uppercase mb-4">
-    Mathematical Engineer
+    Mathematical Engineer Student
     </span>
 
     <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight text-primary">
@@ -25,8 +25,7 @@ export default function Monkey() {
         I design digital products by combining data-driven solutions, algorithmic thinking, and modern web technologies.
     </p>
 
-<div className="flex gap-4">
-        {/* Link bileşeni kullanıldı */}
+<div className=" flex flex-wrap gap-4">
         <Link 
           href="/projects" 
           className="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-opacity-90 transition-all"
@@ -40,6 +39,13 @@ export default function Monkey() {
         >
           Özgeçmişi İncele
         </button>
+        <Link
+        href="/blog"
+        className="px-8 py-3 bg-surface text-primary font-medium rounded-lg hover:bg-opacity-90 transition-all items-center gap-2 shadow-sm border border-surface hover:border-primary/20 "
+      >
+        Blogs
+
+        </Link>
       </div>
 
       {/* ZIPLAYAN OK (SCROLL HINT) */}

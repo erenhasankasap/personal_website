@@ -1,4 +1,5 @@
 import ProjectsSection from "../../components/ProjectsSection";
+import GithubActivity from "../../components/GithubActivity";
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -15,6 +16,7 @@ export default function ProjectsPage() {
       </div>
 
       <ProjectsSection />
+      <GithubActivity />
     </main>
   );
 }
