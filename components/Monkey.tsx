@@ -10,6 +10,12 @@ export default function Monkey() {
 
     }
   };
+
+  const scrollToBlogs = () => {
+    const blogSection = document.getElementById('recent-blogs');
+    if (blogSection) blogSection.scrollIntoView({ behavior: 'smooth' });
+  };  
+
   return(
   <section className="min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto">
 
@@ -39,29 +45,22 @@ export default function Monkey() {
         >
           Özgeçmişi İncele
         </button>
-        <Link
-        href="/blog"
-        className="px-8 py-3 bg-surface text-primary font-medium rounded-lg hover:bg-opacity-90 transition-all items-center gap-2 shadow-sm border border-surface hover:border-primary/20 "
-      >
-        Blogs
 
-        </Link>
       </div>
 
       {/* ZIPLAYAN OK (SCROLL HINT) */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToCV}>
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer" onClick={scrollToBlogs}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
           fill="none" 
           viewBox="0 0 24 24" 
           strokeWidth={1.5} 
           stroke="currentColor" 
-          className="w-8 h-8 text-secondary opacity-70"
+          className="w-8 h-8 text-secondary opacity-70 hover:text-accent transition-colors"
         >
           <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
         </svg>
       </div>
-
     </section>
   );
 }
