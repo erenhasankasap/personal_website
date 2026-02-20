@@ -2,6 +2,8 @@ import { posts } from "../../../data/posts";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // 1. Import a very elegant reading font (Lora) from Google
 import { Lora } from "next/font/google";
@@ -48,7 +50,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           
           {/* Markdown content (prose plugin will automatically format headings and lists) */}
           <div className="text-primary leading-loose space-y-6 text-large">
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+            <ReactMarkdown 
+          remarkPlugins={[remarkMath]}
+          rehypePlugins={[rehypeKatex]}
+        >
+          {post.content}
+        </ReactMarkdown>
           </div>
           
         </div>

@@ -1,18 +1,32 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Project } from '../data/projects';
+import { Project, ProjectStatus } from '../data/projects';
 
-export default function ProjectCard({ title, description, techStack, link, generalPurpose, myRole }: Project) {
+export default function ProjectCard({ title, description, techStack, status, link, generalPurpose, myRole }: Project) {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  // YENİ: Duruma göre pastel renkleri belirleyen fonksiyon
+  const getStatusStyles = (status: ProjectStatus) => {
+    switch (status) {
+      case 'Completed':
+        return 'bg-emerald-50 text-emerald-600 border-emerald-200/60'; // Pastel Yeşil
+      case 'Processing':
+        return 'bg-amber-50 text-amber-600 border-amber-200/60'; // Pastel Sarı
+      case 'Failed':
+        return 'bg-rose-50 text-rose-600 border-rose-200/60'; // Pastel Kırmızı
+      default:
+        return 'bg-surface text-primary border-primary/5';
+    }
+  };
+
   return (
-       <div
+    <div
       onClick={() => setIsExpanded(!isExpanded)}
       className={`group block bg-white rounded-2xl border border-surface shadow-sm hover:shadow-xl p-8 transition-all duration-300 ease-in-out cursor-pointer ${
         isExpanded ? 'scale-[1.02] shadow-xl border-accent/20' : 'hover:-translate-y-2'
       }`}
-        > 
+    >
       <div className="flex items-start justify-between mb-4">
         <h3 className={`text-2xl font-bold transition-colors min-h-[4rem] pr-4 ${isExpanded ? 'text-accent' : 'text-primary group-hover:text-accent'}`}>
           {title}
@@ -31,16 +45,25 @@ export default function ProjectCard({ title, description, techStack, link, gener
         </svg>
       </div>
 
-      <p className="text-secondary mb-6 leading-relaxed min-h-[5rem]">
+      <p className="text-secondary mb-6 leading-relaxed min-h-[7.5rem]">
         {description}
       </p>
 
-      {/* YENİ: Teknoloji etiketleri her zaman görünür (Zıplamayı engeller) */}
-      <div className="flex flex-wrap gap-2">
+      {/* YENİ: Durum Etiketi ve Teknoloji Etiketleri Yan Yana */}
+      <div className="flex flex-wrap gap-2 items-center">
+        {/* Status Badge */}
+        <span className={`text-xs font-bold px-3 py-1.5 rounded-full border tracking-wide uppercase ${getStatusStyles(status)}`}>
+          {status}
+        </span>
+        
+        {/* Ayırıcı Nokta (İsteğe bağlı, şık durur) */}
+        <span className="text-surface-dark/40 mx-1">•</span>
+
+        {/* Tech Stack Badges */}
         {techStack.map((tech) => (
           <span
             key={tech}
-            className="bg-surface text-primary text-sm font-medium px-3 py-1 rounded-full border border-primary/5"
+            className="bg-surface text-primary text-sm font-medium px-3 py-1.5 rounded-full border border-primary/5"
           >
             {tech}
           </span>
@@ -69,7 +92,7 @@ export default function ProjectCard({ title, description, techStack, link, gener
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()} // Linke tıklayınca kartın kapanmasını engeller
+                onClick={(e) => e.stopPropagation()}
                 className="inline-flex items-center text-accent hover:underline font-medium"
               >
                 View Project

@@ -33,7 +33,7 @@ export default function Monkey() {
             Eren Hasan KASAP
           </h1>
           <p className="text-xl md:text-2xl text-secondary max-w-2xl leading-relaxed mb-10 mx-auto md:mx-0">
-            I design digital products with data-driven solutions, an algorithmic mindset, and modern web technologies.
+          I engineer practical solutions to real-world problems. Rather than seeing mathematics and software development as end goals, I utilize them as powerful tools to optimize systems and build impactful products.
           </p>
 
           {/* Buttons */}

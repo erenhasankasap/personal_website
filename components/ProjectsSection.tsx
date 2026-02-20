@@ -15,7 +15,7 @@ export default function ProjectsSection() {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+      <div className="grid grid-cols-1 gap-8 items-start">
         {projects.map((project) => (
           <div key={project.id}>
             <ProjectCard {...project} />

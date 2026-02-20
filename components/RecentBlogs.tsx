@@ -31,7 +31,7 @@ export default function RecentBlogs() {
       {/* Show More Button */}
       <div className="flex justify-center">
         <Link 
-          href="/blog" 
+          href="/blog"
           className="group px-8 py-3 bg-surface border border-surface text-primary font-medium rounded-lg hover:border-primary/20 transition-all shadow-sm flex items-center gap-2"
         >
           See all the blogs
