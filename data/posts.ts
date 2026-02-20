@@ -5,85 +5,65 @@ export interface BlogPost {
   date: string;
   readTime: string;
   category: string;
-  content: string; 
+  content: string;
 }
 
 export const posts: BlogPost[] = [
+  // 1. PINNED POST: Personal Portfolio
   {
-    slug: "gradient-descent-optimizasyonu",
-    title: "Gradient Descent: Descending to the Bottom of the Loss Function",
-    excerpt: "An in-depth look at the mathematics behind how artificial intelligence models learn.",
-    date: "February 18, 2026",
-    readTime: "5 min read",
-    category: "Mathematics & Algorithm",
-    content: `
-### Why Do We Use Derivatives?
-If we know the slope at our current position, we can determine where we need to go downhill. This is exactly what **Gradient** is.
-
-
-* **Learning Rate:** The magnitude of the steps we take.
-* **Epoch:** One complete pass of the entire dataset through the algorithm.
-
-
-
-> "Optimization is where mathematics and computer science shake hands."
-    `
-  },
-  {
-    slug: "docker-ile-sistem-izolasyonu",
-    title: "Isolating Development Environment Using Docker",
-    excerpt: "How do we rescue our projects from the 'but it worked on my machine' problem when getting started with systems programming?",
-    date: "February 10, 2026",
-    readTime: "4 min read",
-    category: "Systems Programming",
-    content: `### Why is Docker Important?
-In line with my systems programming goal, Docker is a great tool for ensuring applications run the same way on every operating system.
-
-I will soon add my notes on network programming through Beej's Guide and Docker network settings here.
-    `
-  },
-  {
-    slug: "nextjs-tailwind-mimarisi",
-    title: "Modern Portfolio Architecture: Next.js and Tailwind v4",
-    excerpt: "Building a website with Dark Mode support by separating Server and Client components.",
-    date: "February 1, 2026",
+    slug: "modern-portfolio-architecture",
+    title: "Modern Portfolio Architecture: Next.js & Tailwind v4",
+    excerpt: "Building a Dark Mode supported, high-performance personal website by separating Server and Client components.",
+    date: "Feb 20, 2026",
     readTime: "7 min read",
     category: "Web Development",
     content: `
-As a software developer, writing good code is not enough; how you present that code, projects, and vision is equally important. I decided to build a modern, fast, and entirely personal digital laboratory that reflects the analytical mindset from my Mathematical Engineering education and my passion for systems programming.
+As a software developer, it's not just about writing good code; it's also about how you present that code, your projects, and your vision. Combining my analytical thinking from Mathematical Engineering with my passion for system programming, I decided to build a modern, fast, and highly personal digital laboratory.
 
-In this article, I will explain step by step how I designed this personal website you are currently reading from scratch and what architectural decisions I made.
-
-### Why Didn't I Use a Ready-Made Template?
-Using WordPress or a ready-made portfolio theme could have saved my weekend. However, my goal was not just to create a "CV site," but to develop a project focused on performance and architecture from top to bottom. That's why I chose the most powerful tools of modern web: **Next.js (App Router), TypeScript, and Tailwind CSS v4.**
+### Why Not Use a Template?
+Using WordPress or a pre-made portfolio theme could have saved my weekend. However, my goal wasn't just to make a "CV website," but to develop a performance and architecture-oriented project from the ground up. That's why I chose the most powerful tools of the modern web: **Next.js (App Router), TypeScript, and Tailwind CSS v4.**
 
 ### 1. Dark Mode and Semantic Color Architecture
-Adding dark mode to websites is generally thought to be just about writing dark:bg-black on every element. However, in this project, I followed a more engineering approach: **Design Tokens.**
-
-Using the power of Tailwind v4, I defined semantic color variables in globals.css:
-* I used --surface instead of bg-white.
-* I used --primary instead of text-black.
-
-Thus, when the theme changes with the next-themes library, instead of changing hundreds of classes in the HTML, only the color of 5-6 variables in the CSS root changes. Result: Zero flicker and tremendous performance.
+By leveraging the power of Tailwind v4, I defined semantic color variables inside \`globals.css\`. This way, when the theme changes, only the root CSS variables change, instead of updating hundreds of classes in the HTML. The result: Zero flicker and massive performance.
 
 ### 2. Dynamic and Developer-Friendly Blog System
-When creating this blog page, I didn't want to set up a cumbersome database or Headless CMS. I designed a **Markdown**-based system befitting an engineer.
+I designed a Markdown-based system. Using Next.js's dynamic routing, I built an engine that compiles my Markdown content at runtime, providing a medium-quality typography effortlessly.
 
-Using Next.js's dynamic routing ([slug]) structure, I built an engine that compiles the .md (Markdown) content I write at runtime. Thanks to react-markdown and @tailwindcss/typography plugins, my code blocks, lists, and headings automatically achieved Medium.com-quality typography.
+### The Biggest Lesson: "Git Disaster" and The Time Machine
+One of the most unforgettable moments was almost sending a week's worth of hard work into the void with a wrong \`git reset --hard\` command. Fortunately, by using Git's "Time Machine", the \`git reflog\` command, I managed to recover the deleted codes.
+    `
+  },
+  // 2. NEW POST: AGGOA Algorithm
+  {
+    slug: "aggoa-algorithm-logic",
+    title: "AGGOA Algorithm: A New Approach in Optimization",
+    excerpt: "Understanding the mathematical foundations and advantages of the AGGOA algorithm in optimization problems.",
+    date: "Feb 19, 2026",
+    readTime: "6 min read",
+    category: "Mathematics & Algorithms",
+    content: `
+Optimization problems are one of the fundamental fields of mathematical engineering. In this article, we will examine the mathematical foundations and the algorithmic logic behind the AGGOA algorithm.
 
-### 3. User Experience (UX) and Hick's Law
-During the design phase, I considered not only the code but also the visitor's psychology.
-* **Hick's Law:** I reduced the button clutter on the homepage. I offered the visitor only two clear options (Projects or CV).
-* **Progressive Disclosure:** Instead of piling all blogs on the homepage, I showed only the latest 3 posts as a "preview" and directed curious visitors to this page.
-* **GitHub Heat Map:** I didn't just list projects; I integrated my daily coding habits (commit history) in the open-source world live on the "Projects" page with react-github-calendar.
+### Core Logic of the Algorithm
+(Note: You can add your detailed notes, mathematical formulas, and the reasons why AGGOA is preferred over other optimization methods here.)
+    `
+  },
+  // 3. OLD POST: Gradient Descent
+  {
+    slug: "gradient-descent-optimization",
+    title: "Gradient Descent: Navigating the Loss Landscape",
+    excerpt: "A deep dive into the mathematics behind how artificial intelligence models learn.",
+    date: "Feb 18, 2026",
+    readTime: "5 min read",
+    category: "Mathematics & Algorithms",
+    content: `
+### Why Do We Use Derivatives?
+If we know the slope of our current position, we can figure out which way to go downhill. That is exactly what a **Gradient** is.
 
-### The Biggest Lesson: "Git Disaster" and Time Machine
-One of the most memorable moments I experienced while developing the project was when I almost sent weeks of effort into outer space with an incorrect git reset --hard command. Fortunately, using git reflog, Git's "Time Machine," I found the deleted commit hash and saved the project from the edge of the cliff. This once again proved to me that version control systems exist not only to store code but also to save lives.
+* **Learning Rate:** The size of the steps we take.
+* **Epoch:** One complete pass of the training dataset through the algorithm.
 
-### What's Next?
-This site will never be a "finished" project for me. I plan to add my notes on Docker, network programming (Beej's Guide), and optimization algorithms like Gradient Descent, and even 3D simulations soon.
-
-Welcome to my digital office!
+> "Optimization is where mathematics shakes hands with computer science."
     `
   }
 ];
