@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
-// 1. Google'dan çok şık bir okuma fontu (Lora) çekiyoruz
+// 1. Import a very elegant reading font (Lora) from Google
 import { Lora } from "next/font/google";
 const lora = Lora({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
@@ -21,7 +21,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         href="/" 
         className="text-secondary hover:text-accent flex items-center gap-2 transition-colors mb-12 w-fit font-medium"
       >
-        ← Yazılara Dön
+        ← Back to Posts
       </Link>
 
       <article>
@@ -39,14 +39,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </h1>
         </header>
 
-        {/* 2. BURASI ÖNEMLİ: Fontu Lora yaptık ve okunaklılığı artıracak sınıflar ekledik */}
+        {/* 2. IMPORTANT HERE: Set font to Lora and added classes to improve readability */}
         <div className={`prose prose-lg dark:prose-invert max-w-none ${lora.className}`}>
           
           <p className="text-xl leading-relaxed text-secondary font-medium mb-12 font-sans">
             {post.excerpt}
           </p>
           
-          {/* Markdown içeriği (prose eklentisi başlıkları, listeleri otomatik dizecek) */}
+          {/* Markdown content (prose plugin will automatically format headings and lists) */}
           <div className="text-primary leading-loose space-y-6 text-large">
             <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>

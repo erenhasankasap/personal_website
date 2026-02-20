@@ -4,31 +4,31 @@ import BlogCard from './BlogCard';
 import { posts } from '../data/posts';
 
 export default function RecentBlogs() {
-  // Sadece ilk 3 postu al (Fragman)
+  // Get only the first 3 posts (Preview)
   const recentPosts = posts.slice(0, 3);
 
   return (
-    // ID'yi 'recent-blogs' yaptık ki ok buraya kayabilsin
+    // Set ID to 'recent-blogs' so the arrow can scroll here
     <section id="recent-blogs" className="py-20 px-6 max-w-5xl mx-auto min-h-screen flex flex-col justify-center">
       
-      {/* Başlık Alanı */}
+      {/* Title Area */}
       <div className="mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-          Son Yazılarım
+          Recent Posts
         </h2>
         <p className="text-secondary text-lg">
-          Matematik, yazılım mimarileri ve teknoloji üzerine düşüncelerim.
+          My thoughts on mathematics, software architectures, and technology.
         </p>
       </div>
 
-      {/* 3'lü Yazı Listesi */}
+      {/* 3-Post List */}
       <div className="flex flex-col gap-6 mb-12">
         {recentPosts.map((post) => (
           <BlogCard key={post.slug} {...post} />
         ))}
       </div>
 
-      {/* Daha Fazla Göster Butonu */}
+      {/* Show More Button */}
       <div className="flex justify-center">
         <Link 
           href="/blog" 

@@ -8,7 +8,7 @@ export default function GithubActivity() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Next.js Hydration uyumsuzluğunu önlemek için
+  // Prevent Next.js hydration mismatch
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -22,10 +22,10 @@ export default function GithubActivity() {
         {/* Üst Başlık */}
         <div className="mb-8">
           <h3 className="text-2xl font-bold text-primary mb-2">
-            Açık Kaynak Katkıları
+            Open Source Contributions
           </h3>
           <p className="text-secondary">
-            GitHub üzerindeki günlük kod yazma ve proje geliştirme aktivitem.
+            My daily coding and project development activity on GitHub.
           </p>
         </div>
 

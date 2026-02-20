@@ -3,12 +3,12 @@ export default function CVSection() {
     <section className="max-w-5xl mx-auto px-6 py-20" id="cv-section">
       <div className="flex flex-col items-center">
         
-        {/* Başlık */}
+        {/* Title */}
         <h2 className="text-3xl font-bold text-primary mb-8">
-          Özgeçmiş / CV
+          Resume / CV
         </h2>
 
-        {/* PDF Çerçevesi */}
+        {/* PDF Frame */}
         <div className="w-full h-[800px] bg-white rounded-xl shadow-lg overflow-hidden border border-surface">
           <iframe 
             src="/cv.pdf" 
@@ -17,7 +17,7 @@ export default function CVSection() {
           />
         </div>
 
-        {/* Alternatif İndirme Butonu (Mobil uyumluluk için şart) */}
+        {/* Alternative Download Button (Required for mobile compatibility) */}
         <div className="mt-6">
           <a 
             href="/cv.pdf" 
@@ -27,7 +27,7 @@ export default function CVSection() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg>
-            PDF Olarak İndir
+            Download as PDF
           </a>
         </div>
 
