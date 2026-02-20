@@ -14,11 +14,12 @@ export default function ProjectsSection() {
           Some software I have developed in line with my academic studies and personal interests.
         </p>
       </div>
-      <div className="columns-1 md:columns-2 gap-8 space-y-8">
-      {projects.map((project) => (
-        <div key={project.id} className="break-inside-avoid">
-        < ProjectCard {...project} />
-        </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        {projects.map((project) => (
+          <div key={project.id}>
+            <ProjectCard {...project} />
+          </div>
         ))}
       </div>
 
