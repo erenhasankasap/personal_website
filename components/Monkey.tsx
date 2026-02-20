@@ -20,7 +20,7 @@ export default function Monkey() {
   <section className="min-h-screen flex flex-col justify-center px-6 max-w-5xl mx-auto">
 
     <span className="text-accent font-medium tracking-widest uppercase mb-4">
-    Mathematical Engineer Student
+    Mathematical Engineering Student
     </span>
 
     <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight text-primary">

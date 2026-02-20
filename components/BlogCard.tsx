@@ -4,7 +4,7 @@ import { BlogPost } from '../data/posts';
 
 export default function BlogCard({ slug, title, excerpt, date, readTime, category }: BlogPost) {
   return (
-    <Link href={`#`} className="group block bg-surface rounded-2xl border border-surface shadow-sm hover:shadow-md p-6 md:p-8 transition-all hover:-translate-y-1">
+    <Link href={`/blog/${slug}`} className="group block bg-surface rounded-2xl border border-surface shadow-sm hover:shadow-md p-6 md:p-8 transition-all hover:-translate-y-1">
       
       <div className="flex items-center justify-between mb-4">
         <span className="text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">
