@@ -44,14 +44,14 @@ export const projects: Project[] = [
     generalPurpose: "The primary objective is to solve the critical trade-off between speed and stability in machine learning optimization. While Nesterov Accelerated Gradient (NAG) provides rapid convergence, its momentum mechanism causes severe instability and overshooting in high-noise mini-batch environments. Conversely, Stochastic Gradient Descent (SGD) is highly stable but notoriously slow. This project aims to mathematically formulate a dynamic transition rule that bridges these two methods, monitoring cost oscillation to optimize neural network training.",
     myRole: "Project Lead and Core Researcher. I formulated the theoretical mathematical foundation of the AGGOA algorithm, defining the dynamic transition coefficient based on gradient magnitude and cost oscillation. I then transitioned this theory into practice by prototyping the algorithm in Python using PyTorch, and conducting rigorous comparative experiments (AGGOA vs. Adam vs. NAG) on Convolutional Neural Networks (CNNs) using the CIFAR-10 dataset to quantitatively prove improvements in convergence speed and divergence mitigation.",
   },
-  {
+{
     id: 4,
     title: "Cross-Platform Ecosystem & API Integration",
-    description: "A comprehensive, cross-platform mobile application developed for both iOS and Android ecosystems. It focuses on delivering a native-like user experience with smooth animations, robust state management, and seamless backend communication.",
+    description: "A comprehensive, cross-platform mobile application developed for both iOS and Android. Ultimately marked as 'Failed' due to a decrease in market demand and challenges in partner coordination, serving as a vital lesson in product-market fit.",
     techStack: ["React Native", "TypeScript", "Tailwind CSS", "RESTful APIs"],
     status: "Failed",
     link: "#",
-    generalPurpose: "To tackle the complexities of mobile software development and cross-platform compatibility. The goal was to build a performant application that maintains a unified codebase while interacting efficiently with external RESTful APIs. It served as a deep dive into asynchronous data fetching, mobile UI/UX paradigms, and overcoming the architectural differences between mobile and web development environments.",
-    myRole: "Lead Mobile Architect. I designed the component hierarchy and implemented the UI using React Native and NativeWind. I architected the data flow, handled complex asynchronous API calls, and ensured that the application state was efficiently managed to prevent memory leaks and unnecessary re-renders. I also focused on optimizing the mobile layouts to adapt fluidly across various screen sizes and device orientations, acknowledging the project's ultimate failure as a vital learning curve in scalability.",
+    generalPurpose: "To build a performant mobile application that maintains a unified codebase while interacting efficiently with RESTful APIs. It served as a deep dive into asynchronous data fetching and mobile UI/UX paradigms. More importantly, the project's cancellation highlighted the non-technical realities of software engineering: the necessity of continuous stakeholder alignment and adapting to shifting market demands.",
+    myRole: "Lead Mobile Architect. I designed the component hierarchy using React Native and NativeWind, handled complex API calls, and managed application state. Despite the technical achievements, the project was ultimately halted because the target audience demand decreased and the project partners could not maintain coordination—teaching me that engineering success requires both solid code and strong business alignment.",
   }
 ];

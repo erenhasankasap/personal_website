@@ -85,7 +85,7 @@ export default function ProjectCard({ title, description, techStack, status, lin
               <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">2. My Role</h4>
               <p className="text-secondary leading-relaxed">{myRole}</p>
             </div>
-
+            {link && link !== "#" && (
             <div>
               <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">3. Project Link</h4>
               <a
@@ -101,6 +101,7 @@ export default function ProjectCard({ title, description, techStack, status, lin
                 </svg>
               </a>
             </div>
+            )}
           </div>
         </div>
       </div>
