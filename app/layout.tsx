@@ -1,6 +1,6 @@
 import React from 'react';
 import "./globals.css";
-import Footer from "../components/Footer.tsx"
+import Footer from "../components/Footer"
 import 'katex/dist/katex.min.css';
 
 export default function RootLayout({
