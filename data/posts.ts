@@ -7,7 +7,6 @@ export interface BlogPost {
   category: string;
   content: string;
 }
-// TETSTETSTST
 export const posts: BlogPost[] = [
    {
     slug: "building-real-product-nextjs",
