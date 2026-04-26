@@ -24,16 +24,17 @@ export const projects: Project[] = [
     generalPurpose: "To create a digital presence that reflects my engineering philosophy: using software as a tool to solve structural problems. Rather than using basic HTML/CSS or pre-built website builders, the goal was to master the modern Next.js App Router architecture. It aims to showcase not just my past projects, but my ability to design scalable component trees, manage complex dynamic routing for a markdown-based blog, and implement clean, maintainable styling systems.",
     myRole: "Full-stack Developer and UI/UX Architect. I engineered the entire frontend architecture, ensuring strict type safety with TypeScript to catch errors during development. I implemented a dynamic markdown rendering system with full KaTeX/LaTeX support for mathematical formulas, optimized asset loading for maximum performance, and crafted a minimalist interface that prioritizes readability and seamless user experience.",
   },
-   {
+  {
     id: 2,
-    title: "Circle Panic: Multiplayer Chaos & Shadow Company",
-    description: "A chaotic, real-time multiplayer mobile party game where 8 players face off in a circular arena, racing to grab central balls to avoid elimination. The ultimate loser faces a penalty drawn from custom card pools (bar, family, or user-generated). While the surface is a highly engaging mobile game, the entire project was deliberately structured and executed as an end-to-end 'Shadow Company' simulation.",
-    techStack: ["Golang", "Docker", "UDP Sockets", "System Architecture", "Tech Leadership"],
-    status: "Processing",
-    link: "https://github.com/erenhasankasap/Circle_Panic",
-    generalPurpose: "To build a fully functional, high-performance multiplayer mobile game from scratch, handling the complex engineering challenge of synchronizing real-time data from 8 different players with millisecond latency. The core objective was to master custom UDP networking, complex algorithmic logic for collision and penalty pools, and backend containerization. Beyond the game itself, the purpose was to use this product as a real-world sandbox to simulate a tech startup—learning how to create rigorous business plans and understanding the life cycle of a product from a commercial perspective.",
-    myRole: "System Architect & Simulated CTO. On the technical side, I engineered the custom UDP sockets for real-time synchronization, designed a server-authoritative backend to prevent client-side manipulation, and fully containerized the server environment using Docker for professional, isolated deployment. On the management side, I ran a meticulous operational simulation of a 'Shadow Company.' I calculated hypothetical employee salaries, estimated development timelines based on strict man-hours, and conducted rigorous cost-benefit analyses for infrastructure. For example, I mathematically weighed the financial impact of purchasing a commercial Firewall license versus paying developers' salaries to build an internal security solution.",
+    title: "Circle Panic: Party Game Market Research",
+    description: "A product-management deep dive into the mobile party-game category, originally scoped as a multiplayer game build and deliberately pivoted into a competitive market analysis. The output: a teardown of five direct competitors, a perceptual map identifying an unoccupied 'offline + dynamic content' quadrant, and a 12-month cost model comparing a fully-staffed studio against a two-student bootstrap.",
+    techStack: ["Market Research", "Competitive Analysis", "Financial Modeling", "Product Strategy", "Excel"],
+    status: "Completed",
+    link: "/projects/circle-panic",
+    generalPurpose: "To answer a focused product question without writing a single line of game code: where does Circle Panic actually fit in the mobile party-game market, and what would it cost to build it at studio scale versus as a two-student team? The project treats the original game concept as a product hypothesis rather than an engineering target — using competitor teardowns, a perceptual map, and a bottoms-up cost model to test whether the gap is real and whether the unit economics work. The goal was to produce the kind of artifact a Product Manager would actually ship: opinionated, sourced, and decision-ready.",
+    myRole: "Sole researcher and analyst. I built the competitive teardown of Heads Up!, Spaceteam, Truth or Dare, King of Booze, and Never Have I Ever — comparing core loops, monetization, virality, and weaknesses in a single comparable matrix. I designed and authored the two-axis perceptual map (online↔offline × static↔dynamic content) that visualizes the gap Circle Panic targets. I then built a 12-month bottoms-up cost model in Excel covering personnel, infrastructure, marketing, and overhead — generating a 539x cost ratio between the studio scenario and the bootstrap scenario. The deliverables: an Excel model, a perceptual map asset, and a teardown article — all positioned as a portfolio artifact for product-management roles.",
   },
+
   {
     id: 3,
     title: "TÜBİTAK 2209-A: AGGOA Algorithm",

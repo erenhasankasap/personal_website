@@ -2,22 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import BlogCard from '../../components/BlogCard';
 import { posts } from '../../data/posts';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Blog',
+  description: 'Thoughts on mathematics, software architecture, and technology by Eren Hasan Kasap.',
+};
 
 export default function BlogIndexPage() {
   return (
     <main className="min-h-screen pt-20 px-6 max-w-5xl mx-auto">
-      
-      {/* Back Button (Geri Dönüş Butonu) */}
-      <div className="mb-8">
-        <Link
-          href="/"
-          className="text-secondary hover:text-accent flex items-center gap-2 transition-colors w-fit font-medium"
-        >
-          ← Back to Home
-        </Link>
-      </div>
-
-      {/* Header Area (Başlık Alanı) */}
+      {/* Header Area */}
       <div className="mb-12 border-b border-surface pb-8">
         <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">
           All Posts

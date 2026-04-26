@@ -4,10 +4,28 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
-
-// 1. Import a very elegant reading font (Lora) from Google
+import type { Metadata } from "next";
 import { Lora } from "next/font/google";
+
 const lora = Lora({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
+
+export async function generateStaticParams() {
+  return posts.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = posts.find((p) => p.slug === slug);
+  if (!post) return {};
+  return {
+    title: post.title,
+    description: post.excerpt,
+  };
+}
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
@@ -19,8 +37,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <main className="min-h-screen py-20 px-6 max-w-3xl mx-auto">
-      <Link 
-        href="/" 
+      <Link
+        href="/blog"
         className="text-secondary hover:text-accent flex items-center gap-2 transition-colors mb-12 w-fit font-medium"
       >
         ← Back to Posts

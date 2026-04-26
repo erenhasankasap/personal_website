@@ -4,7 +4,7 @@ import { BlogPost } from '../data/posts';
 
 export default function BlogCard({ slug, title, excerpt, date, readTime, category }: BlogPost) {
   return (
-    <Link href={`/blog/${slug}`} className="group block bg-surface rounded-2xl border border-surface shadow-sm hover:shadow-md p-6 md:p-8 transition-all hover:-translate-y-1">
+    <Link href={`/blog/${slug}`} className="group block bg-white rounded-2xl border border-primary/8 shadow-sm hover:shadow-md p-6 md:p-8 transition-all hover:-translate-y-1">
       
 {/* Top Section: Category and Date (Stacked on mobile, inline on desktop) */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
