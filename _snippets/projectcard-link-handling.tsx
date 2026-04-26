@@ -1,30 +1,4 @@
-// OPSIYONEL — sadece istersen değiştir.
-//
-// Mevcut ProjectCard.tsx'de tüm "View Project" link'leri şu satırla render ediliyor:
-//
-//   <a href={link} target="_blank" rel="noopener noreferrer" ...>
-//
-// Bu, GitHub linkleri için doğru ama yeni dahili sayfa "/projects/circle-panic"
-// için garip — kullanıcı yeni bir sekmede açılmasını beklemez.
-//
-// Düzeltme: link string'i "/" ile başlıyorsa (yani internal route) Next.js Link
-// kullan, başlamıyorsa (external GitHub vs.) <a target="_blank"> kullan.
-//
-// ProjectCard.tsx içinde `import` bloğunun en altına ekle:
 import Link from "next/link";
-
-// Aynı dosyadaki "View Project" link bloğunu bul ve şununla değiştir:
-//
-// {link && link !== "#" && (
-//   <div>
-//     <h4 className="...">3. Project Link</h4>
-//     <a href={link} target="_blank" rel="noopener noreferrer" ...>
-//       View Project ...
-//     </a>
-//   </div>
-// )}
-//
-// YENİ:
 {link && link !== "#" && (
   <div>
     <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">
