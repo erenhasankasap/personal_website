@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
 import BlogCard from './BlogCard';
-import { posts } from '../data/posts';
+import { getAllPosts } from '../lib/content';
 
 export default function RecentBlogs() {
   // Get only the first 3 posts (Preview)
-  const recentPosts = posts.slice(0, 3);
+  const recentPosts = getAllPosts().slice(0, 3);
 
   return (
     // Set ID to 'recent-blogs' so the arrow can scroll here

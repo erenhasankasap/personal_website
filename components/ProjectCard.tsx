@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Project, ProjectStatus } from '../data/projects';
+import Link from 'next/link';
+import type { Project, ProjectStatus } from '../lib/content';
 
 export default function ProjectCard({ title, description, techStack, status, link, generalPurpose, myRole }: Project) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -88,18 +89,31 @@ export default function ProjectCard({ title, description, techStack, status, lin
             {link && link !== "#" && (
             <div>
               <h4 className="text-sm font-bold text-primary uppercase tracking-wider mb-2">3. Project Link</h4>
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center text-accent hover:underline font-medium"
-              >
-                View Project
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
+              {link.startsWith('/') ? (
+                <Link
+                  href={link}
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center text-accent hover:underline font-medium"
+                >
+                  View Project
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              ) : (
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  className="inline-flex items-center text-accent hover:underline font-medium"
+                >
+                  View Project
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              )}
             </div>
             )}
           </div>

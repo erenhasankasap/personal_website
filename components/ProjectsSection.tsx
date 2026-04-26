@@ -1,8 +1,9 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import { projects } from '../data/projects';
+import { getAllProjects } from '../lib/content';
 
 export default function ProjectsSection() {
+  const projects = getAllProjects();
   return (
     <section className="py-20 px-6 max-w-5xl mx-auto">
       {/* Section Title */}
