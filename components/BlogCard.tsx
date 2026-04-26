@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { BlogPost } from '../data/posts';
+import { BlogPost } from '../lib/content';
 
 export default function BlogCard({ slug, title, excerpt, date, readTime, category }: BlogPost) {
   return (

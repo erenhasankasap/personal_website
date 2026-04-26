@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import BlogCard from '../../components/BlogCard';
-import { posts } from '../../data/posts';
+import { getAllPosts } from '../../lib/content';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
+  const posts = getAllPosts();
   return (
     <main className="min-h-screen pt-20 px-6 max-w-5xl mx-auto">
       {/* Header Area */}

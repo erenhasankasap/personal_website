@@ -1,4 +1,4 @@
-import { posts } from "../../../data/posts";
+import { getAllPosts, getPostBySlug } from "../../../lib/content";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
@@ -10,7 +10,7 @@ import { Lora } from "next/font/google";
 const lora = Lora({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export async function generateStaticParams() {
-  return posts.map((p) => ({ slug: p.slug }));
+  return getAllPosts().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({
@@ -19,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = getPostBySlug(slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -29,7 +29,7 @@ export async function generateMetadata({
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const post = posts.find((p) => p.slug === resolvedParams.slug);
+  const post = getPostBySlug(resolvedParams.slug);
 
   if (!post) {
     notFound();

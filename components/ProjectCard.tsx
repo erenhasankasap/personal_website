@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Project, ProjectStatus } from '../data/projects';
+import type { Project, ProjectStatus } from '../lib/content';
 
 export default function ProjectCard({ title, description, techStack, status, link, generalPurpose, myRole }: Project) {
   const [isExpanded, setIsExpanded] = useState(false);
