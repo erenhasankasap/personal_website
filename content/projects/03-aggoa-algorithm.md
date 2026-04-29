@@ -1,7 +1,7 @@
 ---
 id: 3
 title: "TÜBİTAK 2209-A: AGGOA Algorithm"
-description: "An academic research and application project funded by the TÜBİTAK 2209-A program. It focuses on developing a novel, hybrid mathematical optimization algorithm (AGGOA) designed to dynamically balance speed and stability when training Deep Learning models."
+description: "A government-funded research project engineering a hybrid optimization algorithm that dynamically bridges NAG's speed with SGD's stability. Tested on CIFAR-10 with 1,000,000+ parameters, targeting measurable improvements in convergence rate and divergence mitigation."
 techStack:
   - "Python"
   - "PyTorch"
@@ -9,6 +9,8 @@ techStack:
   - "Data Analysis"
 status: "Processing"
 link: "#"
-generalPurpose: "The primary objective is to solve the critical trade-off between speed and stability in machine learning optimization. While Nesterov Accelerated Gradient (NAG) provides rapid convergence, its momentum mechanism causes severe instability and overshooting in high-noise mini-batch environments. Conversely, Stochastic Gradient Descent (SGD) is highly stable but notoriously slow. This project aims to mathematically formulate a dynamic transition rule that bridges these two methods, monitoring cost oscillation to optimize neural network training."
-myRole: "Project Lead and Core Researcher. I formulated the theoretical mathematical foundation of the AGGOA algorithm, defining the dynamic transition coefficient based on gradient magnitude and cost oscillation. I then transitioned this theory into practice by prototyping the algorithm in Python using PyTorch, and conducting rigorous comparative experiments (AGGOA vs. Adam vs. NAG) on Convolutional Neural Networks (CNNs) using the CIFAR-10 dataset to quantitatively prove improvements in convergence speed and divergence mitigation."
+generalPurpose: >
+  To solve the speed-vs-stability trade-off in deep learning optimization. NAG converges fast but oscillates violently in noisy mini-batch environments. SGD is stable but painfully slow. AGGOA introduces a dynamic transition coefficient that monitors cost oscillation in real-time — using NAG's momentum when training is smooth, switching to SGD's stability when noise spikes. The algorithm is tested on CNNs with 1,000,000+ trainable parameters using the CIFAR-10 dataset (60,000 images, 10 classes).
+myRole: >
+  Project lead and core researcher. Formulated the mathematical foundation of AGGOA — defining the dynamic transition coefficient based on gradient magnitude and cost oscillation. Prototyped the algorithm in Python with PyTorch and ran comparative experiments (AGGOA vs. Adam vs. NAG) on Convolutional Neural Networks. Currently analyzing convergence curves across 3 optimizer configurations to quantify improvements in training stability and speed.
 ---

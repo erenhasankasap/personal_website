@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Circle Panic — Party Game Market Research | Eren Hasan Kasap",
   description:
-    "A product-management teardown of the mobile party-game category: competitor analysis, perceptual map, and a 12-month cost model comparing a full studio against a two-student bootstrap.",
+    "A product-management teardown of the mobile party-game category: competitor analysis, perceptual map, and a bottoms-up cost model comparing a full studio against a two-student bootstrap.",
 };
 
 export default function CirclePanicPage() {
@@ -48,7 +48,7 @@ export default function CirclePanicPage() {
             5 Competitors
           </span>
           <span className="bg-surface text-primary text-sm font-medium px-3 py-1.5 rounded-full border border-primary/5">
-            12-Month Model
+            9 + 18 Month Model
           </span>
         </div>
       </section>
@@ -111,19 +111,19 @@ export default function CirclePanicPage() {
           </div>
 
           <div className="bg-white rounded-2xl border border-surface p-6">
-            <div className="text-4xl font-bold text-accent mb-2">$1.7M</div>
+            <div className="text-4xl font-bold text-accent mb-2">$1.19M</div>
             <p className="text-sm text-secondary leading-relaxed">
-              12-month studio cost (10 FTEs, USD). Most of it is non-engineering
+              9-month studio cost (10 FTEs, USD). Most of it is non-engineering
               overhead — not product work.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl border border-surface p-6">
-            <div className="text-4xl font-bold text-accent mb-2">539×</div>
+            <div className="text-4xl font-bold text-accent mb-2">442×</div>
             <p className="text-sm text-secondary leading-relaxed">
               Cost ratio between the studio scenario and a two-student
               out-of-pocket bootstrap. Even with opportunity cost included, the
-              gap stays at 18×.
+              gap stays at ~10×.
             </p>
           </div>
         </div>
@@ -162,10 +162,10 @@ export default function CirclePanicPage() {
           The Cost Model
         </h2>
         <p className="text-secondary leading-relaxed mb-6 max-w-3xl">
-          A 12-month bottoms-up model comparing two scenarios — a fully-staffed
-          studio versus two students bootstrapping the same product. The model
-          is built on USD averages from Glassdoor, Levels.fyi, and Indeed, with
-          assumptions tagged in blue and formulas in black.
+          A bottoms-up model comparing two scenarios — a 9-month, fully-staffed
+          studio versus two students bootstrapping the same product over 18
+          months. The model is built on USD averages from Glassdoor, Levels.fyi,
+          and Indeed, with assumptions tagged in blue and formulas in black.
         </p>
 
         <div className="overflow-x-auto">
@@ -186,28 +186,28 @@ export default function CirclePanicPage() {
             <tbody className="text-secondary">
               <tr className="border-b border-surface/60">
                 <td className="py-3 px-4">Personnel (10 FTEs vs. 2 founders)</td>
-                <td className="py-3 px-4 text-right font-mono">$1,120,000</td>
+                <td className="py-3 px-4 text-right font-mono">$840,000</td>
                 <td className="py-3 px-4 text-right font-mono">$0</td>
               </tr>
               <tr className="border-b border-surface/60">
                 <td className="py-3 px-4">Infrastructure & Tools</td>
-                <td className="py-3 px-4 text-right font-mono">$84,004</td>
-                <td className="py-3 px-4 text-right font-mono">$964</td>
+                <td className="py-3 px-4 text-right font-mono">$36,034</td>
+                <td className="py-3 px-4 text-right font-mono">$484</td>
               </tr>
               <tr className="border-b border-surface/60">
                 <td className="py-3 px-4">Marketing & UA</td>
-                <td className="py-3 px-4 text-right font-mono">$121,000</td>
+                <td className="py-3 px-4 text-right font-mono">$52,000</td>
                 <td className="py-3 px-4 text-right font-mono">$0</td>
               </tr>
               <tr className="border-b border-surface/60">
                 <td className="py-3 px-4">Overhead (benefits, office, legal)</td>
-                <td className="py-3 px-4 text-right font-mono">$380,500</td>
+                <td className="py-3 px-4 text-right font-mono">$258,750</td>
                 <td className="py-3 px-4 text-right font-mono">$2,200</td>
               </tr>
               <tr className="border-t-2 border-primary/20 font-bold text-primary">
-                <td className="py-4 px-4">Total 12-month cost</td>
-                <td className="py-4 px-4 text-right font-mono">$1,705,504</td>
-                <td className="py-4 px-4 text-right font-mono">$3,164</td>
+                <td className="py-4 px-4">Total cost (respective timelines)</td>
+                <td className="py-4 px-4 text-right font-mono">$1,186,784</td>
+                <td className="py-4 px-4 text-right font-mono">$2,684</td>
               </tr>
             </tbody>
           </table>
@@ -216,7 +216,7 @@ export default function CirclePanicPage() {
         <p className="text-sm text-secondary italic mt-4 max-w-3xl">
           The headline number isn&apos;t engineering cost — it&apos;s
           organizational overhead. Personnel, benefits, and office account for
-          ~88% of the studio scenario. The implication: most of what a studio
+          ~87% of the studio scenario. The implication: most of what a studio
           spends isn&apos;t building the product, it&apos;s running the
           company that builds it.
         </p>
@@ -253,7 +253,7 @@ export default function CirclePanicPage() {
               </svg>
             </div>
             <p className="text-sm text-secondary leading-relaxed">
-              Two-sheet workbook: competitive matrix + 12-month cost model with
+              Two-sheet workbook: competitive matrix + bottoms-up cost model with
               live formulas. Download .xlsx
             </p>
           </a>
